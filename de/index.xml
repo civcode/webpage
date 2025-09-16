@@ -1,117 +1,35 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>ROTH Software</title>
-    <link>https://preview.rothsoftware.com/de/</link>
-    <description>Recent content on ROTH Software</description>
-    <generator>Hugo</generator>
-    <language>de-DE</language>
-    <lastBuildDate>Thu, 18 Feb 2021 10:07:21 +0600</lastBuildDate>
-    <atom:link href="https://preview.rothsoftware.com/de/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>How and why we decided to launch an EMI scheme for our employees</title>
-      <link>https://preview.rothsoftware.com/de/blog/post-7/</link>
-      <pubDate>Thu, 18 Feb 2021 10:07:21 +0600</pubDate>
-      <guid>https://preview.rothsoftware.com/de/blog/post-7/</guid>
-      <description>&lt;p&gt;Heading example Here is example of hedings. You can use this heading by following markdownify rules.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>What to consider before starting a business – Inside The Studio</title>
-      <link>https://preview.rothsoftware.com/de/blog/post-8/</link>
-      <pubDate>Mon, 18 Jan 2021 10:07:21 +0600</pubDate>
-      <guid>https://preview.rothsoftware.com/de/blog/post-8/</guid>
-      <description>&lt;p&gt;Heading example Here is example of hedings. You can use this heading by following markdownify rules.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>The Beginning Adversus is a web-based dialer and practical CRM solution</title>
-      <link>https://preview.rothsoftware.com/de/blog/post-1/</link>
-      <pubDate>Tue, 18 Aug 2020 10:07:21 +0600</pubDate>
-      <guid>https://preview.rothsoftware.com/de/blog/post-1/</guid>
-      <description>&lt;p&gt;Heading example Here is example of hedings. You can use this heading by following markdownify rules.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Pump-up the team morale and celebrate the excellence</title>
-      <link>https://preview.rothsoftware.com/de/blog/post-2/</link>
-      <pubDate>Sat, 18 Jul 2020 10:07:21 +0600</pubDate>
-      <guid>https://preview.rothsoftware.com/de/blog/post-2/</guid>
-      <description>&lt;p&gt;Heading example Here is example of hedings. You can use this heading by following markdownify rules.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>screens with built in Present and Dismiss animations.</title>
-      <link>https://preview.rothsoftware.com/de/blog/post-3/</link>
-      <pubDate>Thu, 18 Jun 2020 10:07:21 +0600</pubDate>
-      <guid>https://preview.rothsoftware.com/de/blog/post-3/</guid>
-      <description>&lt;p&gt;Heading example Here is example of hedings. You can use this heading by following markdownify rules.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Adversus is a web-based dialer and practical CRM solution</title>
-      <link>https://preview.rothsoftware.com/de/blog/post-4/</link>
-      <pubDate>Mon, 18 May 2020 10:07:21 +0600</pubDate>
-      <guid>https://preview.rothsoftware.com/de/blog/post-4/</guid>
-      <description>&lt;p&gt;Heading example Here is example of hedings. You can use this heading by following markdownify rules.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Adversus is a web-based dialer and practical CRM solution</title>
-      <link>https://preview.rothsoftware.com/de/blog/post-5/</link>
-      <pubDate>Sat, 18 Apr 2020 10:07:21 +0600</pubDate>
-      <guid>https://preview.rothsoftware.com/de/blog/post-5/</guid>
-      <description>&lt;p&gt;Heading example Here is example of hedings. You can use this heading by following markdownify rules.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Adversus is a web-based dialer and practical CRM solution</title>
-      <link>https://preview.rothsoftware.com/de/blog/post-6/</link>
-      <pubDate>Wed, 18 Mar 2020 10:07:21 +0600</pubDate>
-      <guid>https://preview.rothsoftware.com/de/blog/post-6/</guid>
-      <description>&lt;p&gt;Heading example Here is example of hedings. You can use this heading by following markdownify rules.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://preview.rothsoftware.com/de/aboutme/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://preview.rothsoftware.com/de/aboutme/</guid>
-      <description>&lt;h3 id=&#34;about&#34;&gt;About&lt;/h3&gt;&#xA;&lt;!-- ---&#xA;title: &#34;About&#34;&#xA;button:&#xA;  enable: true&#xA;  label: &#34;Contact&#34;&#xA;  link: &#34;contact/&#34;&#xA;--- --&gt;&#xA;&lt;br/&gt;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;     &#xA;     &#xA;&#xA;&#xA;&lt;img src=&#34;https://preview.rothsoftware.com/images/portrait-roth-edit-small_hu_d2500c3a8aa5cc3b.jpg&#34;&#xA;     alt=&#34;Portrait&#34;&#xA;     class=&#34;portrait-img&#34;&gt;&#xA;&#xA;&lt;p&gt;&lt;strong class=&#34;fw-bold&#34;&gt;Christian Roth – Roth Software Engineering e.U.&lt;/strong&gt;&lt;br&gt;&#xA;Softwarelösungen für Unternehmen&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://preview.rothsoftware.com/de/legal-notice/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://preview.rothsoftware.com/de/legal-notice/</guid>
-      <description>&lt;style&gt;&#xA;  h1.display-3.fw-medium { text-align: left !important; }&#xA;&lt;/style&gt;&#xA;&lt;h3 id=&#34;impressum&#34;&gt;Impressum&lt;/h3&gt;&#xA;&lt;br/&gt;&#xA;&lt;p&gt;&lt;strong&gt;Roth Software Engineering e.U.&lt;strong/&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Bedingungen Service</title>
-      <link>https://preview.rothsoftware.com/de/terms-conditions/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://preview.rothsoftware.com/de/terms-conditions/</guid>
-      <description>&lt;h5 id=&#34;responsibility-of-contributors&#34;&gt;Responsibility of Contributors&lt;/h5&gt;&#xA;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis. Sem turpis sed viverra massa gravida pharetra. Non dui dolor potenti eu dignissim fusce. Ultrices amet, in curabitur a arcu a lectus morbi id. Iaculis erat sagittis in tortor cursus. Molestie urna eu tortor, erat scelerisque eget. Nunc hendrerit sed interdum lacus. Lorem quis viverra sed&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Datenschutz-Bestimmungen</title>
-      <link>https://preview.rothsoftware.com/de/privacy-policy/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://preview.rothsoftware.com/de/privacy-policy/</guid>
-      <description>&lt;h5 id=&#34;responsibility-of-contributors&#34;&gt;Responsibility of Contributors&lt;/h5&gt;&#xA;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis. Sem turpis sed viverra massa gravida pharetra. Non dui dolor potenti eu dignissim fusce. Ultrices amet, in curabitur a arcu a lectus morbi id. Iaculis erat sagittis in tortor cursus. Molestie urna eu tortor, erat scelerisque eget. Nunc hendrerit sed interdum lacus. Lorem quis viverra sed&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Kontakt</title>
-      <link>https://preview.rothsoftware.com/de/contact/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://preview.rothsoftware.com/de/contact/</guid>
-      <description>&lt;h4 id=&#34;warum-sie-uns-kontaktieren-sollten&#34;&gt;Warum Sie uns kontaktieren sollten!&lt;/h4&gt;&#xA;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit recusandae voluptates doloremque veniam temporibus porro culpa ipsa, nisi soluta minima saepe laboriosam debitis nesciunt.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Leistungen A</title>
-      <link>https://preview.rothsoftware.com/de/services/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://preview.rothsoftware.com/de/services/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Preisgestaltung</title>
-      <link>https://preview.rothsoftware.com/de/pricing/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://preview.rothsoftware.com/de/pricing/</guid>
-      <description></description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ROTH Software</title><link>https://rothsoftware.com/de/</link><description>Recent content on ROTH Software</description><generator>Hugo</generator><language>de-DE</language><lastBuildDate>Thu, 18 Feb 2021 10:07:21 +0600</lastBuildDate><atom:link href="https://rothsoftware.com/de/index.xml" rel="self" type="application/rss+xml"/><item><title>How and why we decided to launch an EMI scheme for our employees</title><link>https://rothsoftware.com/de/blog/post-7/</link><pubDate>Thu, 18 Feb 2021 10:07:21 +0600</pubDate><guid>https://rothsoftware.com/de/blog/post-7/</guid><description>&lt;p>Heading example Here is example of hedings. You can use this heading by following markdownify rules.&lt;/p></description></item><item><title>What to consider before starting a business – Inside The Studio</title><link>https://rothsoftware.com/de/blog/post-8/</link><pubDate>Mon, 18 Jan 2021 10:07:21 +0600</pubDate><guid>https://rothsoftware.com/de/blog/post-8/</guid><description>&lt;p>Heading example Here is example of hedings. You can use this heading by following markdownify rules.&lt;/p></description></item><item><title>The Beginning Adversus is a web-based dialer and practical CRM solution</title><link>https://rothsoftware.com/de/blog/post-1/</link><pubDate>Tue, 18 Aug 2020 10:07:21 +0600</pubDate><guid>https://rothsoftware.com/de/blog/post-1/</guid><description>&lt;p>Heading example Here is example of hedings. You can use this heading by following markdownify rules.&lt;/p></description></item><item><title>Pump-up the team morale and celebrate the excellence</title><link>https://rothsoftware.com/de/blog/post-2/</link><pubDate>Sat, 18 Jul 2020 10:07:21 +0600</pubDate><guid>https://rothsoftware.com/de/blog/post-2/</guid><description>&lt;p>Heading example Here is example of hedings. You can use this heading by following markdownify rules.&lt;/p></description></item><item><title>screens with built in Present and Dismiss animations.</title><link>https://rothsoftware.com/de/blog/post-3/</link><pubDate>Thu, 18 Jun 2020 10:07:21 +0600</pubDate><guid>https://rothsoftware.com/de/blog/post-3/</guid><description>&lt;p>Heading example Here is example of hedings. You can use this heading by following markdownify rules.&lt;/p></description></item><item><title>Adversus is a web-based dialer and practical CRM solution</title><link>https://rothsoftware.com/de/blog/post-4/</link><pubDate>Mon, 18 May 2020 10:07:21 +0600</pubDate><guid>https://rothsoftware.com/de/blog/post-4/</guid><description>&lt;p>Heading example Here is example of hedings. You can use this heading by following markdownify rules.&lt;/p></description></item><item><title>Adversus is a web-based dialer and practical CRM solution</title><link>https://rothsoftware.com/de/blog/post-5/</link><pubDate>Sat, 18 Apr 2020 10:07:21 +0600</pubDate><guid>https://rothsoftware.com/de/blog/post-5/</guid><description>&lt;p>Heading example Here is example of hedings. You can use this heading by following markdownify rules.&lt;/p></description></item><item><title>Adversus is a web-based dialer and practical CRM solution</title><link>https://rothsoftware.com/de/blog/post-6/</link><pubDate>Wed, 18 Mar 2020 10:07:21 +0600</pubDate><guid>https://rothsoftware.com/de/blog/post-6/</guid><description>&lt;p>Heading example Here is example of hedings. You can use this heading by following markdownify rules.&lt;/p></description></item><item><title/><link>https://rothsoftware.com/de/aboutme/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rothsoftware.com/de/aboutme/</guid><description>&lt;h3 id="about">About&lt;/h3>
+&lt;!-- ---
+title: "About"
+button:
+ enable: true
+ label: "Contact"
+ link: "contact/"
+--- -->
+&lt;br/>
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+&lt;img src="https://rothsoftware.com/images/portrait-roth-edit-small_hu_d2500c3a8aa5cc3b.jpg"
+ alt="Portrait"
+ class="portrait-img">
+
+&lt;p>&lt;strong class="fw-bold">Christian Roth – Roth Software Engineering e.U.&lt;/strong>&lt;br>
+Softwarelösungen für Unternehmen&lt;/p></description></item><item><title/><link>https://rothsoftware.com/de/legal-notice/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rothsoftware.com/de/legal-notice/</guid><description>&lt;style>
+ h1.display-3.fw-medium { text-align: left !important; }
+&lt;/style>
+&lt;h3 id="impressum">Impressum&lt;/h3>
+&lt;br/>
+&lt;p>&lt;strong>Roth Software Engineering e.U.&lt;strong/>&lt;/p></description></item><item><title>Bedingungen Service</title><link>https://rothsoftware.com/de/terms-conditions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rothsoftware.com/de/terms-conditions/</guid><description>&lt;h5 id="responsibility-of-contributors">Responsibility of Contributors&lt;/h5>
+&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis. Sem turpis sed viverra massa gravida pharetra. Non dui dolor potenti eu dignissim fusce. Ultrices amet, in curabitur a arcu a lectus morbi id. Iaculis erat sagittis in tortor cursus. Molestie urna eu tortor, erat scelerisque eget. Nunc hendrerit sed interdum lacus. Lorem quis viverra sed&lt;/p></description></item><item><title>Datenschutz-Bestimmungen</title><link>https://rothsoftware.com/de/privacy-policy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rothsoftware.com/de/privacy-policy/</guid><description>&lt;h5 id="responsibility-of-contributors">Responsibility of Contributors&lt;/h5>
+&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis. Sem turpis sed viverra massa gravida pharetra. Non dui dolor potenti eu dignissim fusce. Ultrices amet, in curabitur a arcu a lectus morbi id. Iaculis erat sagittis in tortor cursus. Molestie urna eu tortor, erat scelerisque eget. Nunc hendrerit sed interdum lacus. Lorem quis viverra sed&lt;/p></description></item><item><title>Kontakt</title><link>https://rothsoftware.com/de/contact/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rothsoftware.com/de/contact/</guid><description>&lt;h4 id="warum-sie-uns-kontaktieren-sollten">Warum Sie uns kontaktieren sollten!&lt;/h4>
+&lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit recusandae voluptates doloremque veniam temporibus porro culpa ipsa, nisi soluta minima saepe laboriosam debitis nesciunt.&lt;/p></description></item><item><title>Leistungen A</title><link>https://rothsoftware.com/de/services/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rothsoftware.com/de/services/</guid><description/></item><item><title>Preisgestaltung</title><link>https://rothsoftware.com/de/pricing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rothsoftware.com/de/pricing/</guid><description/></item></channel></rss>

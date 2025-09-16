@@ -1,0 +1,84 @@
+/* poppins-regular - latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/poppins/poppins-v23-latin-regular.woff2') format('woff2');
+}
+
+/* roboto-regular - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/roboto/roboto-v49-latin-regular.woff2') format('woff2');
+}
+
+/* Add more weights/styles as needed */
+/* Lato 300 */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('/fonts/lato/lato-v24-latin-300.woff2') format('woff2');
+}
+
+/* Lato 400 */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/lato/lato-v24-latin-regular.woff2') format('woff2');
+}
+
+/* Lato 500 — fallback to 400 */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/lato/lato-v24-latin-regular.woff2') format('woff2');
+}
+
+/* Lato 600 — fallback to 700 */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/lato/lato-v24-latin-700.woff2') format('woff2');
+}
+
+/* Lato 700 (Bold) */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/lato/lato-v24-latin-700.woff2') format('woff2');
+}
+
+/* Lato 900 (Black) */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('/fonts/lato/lato-v24-latin-900.woff2') format('woff2');
+}
+
+/* Devicon */
+@font-face {
+  font-family: "devicon";
+  src: url("/fonts/devicon/devicon.woff2") format("woff2"),
+       url("/fonts/devicon/devicon.woff") format("woff"),
+       url("/fonts/devicon/devicon.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
