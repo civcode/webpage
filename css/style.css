@@ -9350,6 +9350,11 @@ a.btn, .btn, .btn-primary {
   padding-right: 5px !important; }
 
 /* Debugging: outline all elements */
+/* Ensure bold and strong text render correctly */
+.content strong,
+.content b {
+  font-weight: 700; }
+
 .preloader {
   position: fixed;
   top: 0;
