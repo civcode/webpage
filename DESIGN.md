@@ -1,4 +1,4 @@
-# Industrial Dark website prototype
+# Blueprint Light website prototype
 
 This is the static GitHub Pages design prototype on branch `design`, based on the `dev` branch. The production `gh-pages` branch is deliberately untouched.
 
@@ -15,7 +15,7 @@ The GitHub Pages production site remains unchanged until someone explicitly merg
 
 ## What's in this prototype
 
-- `css/design.css`: responsive Industrial Dark palette (navy, teal and coral logo accents), technical hero, navigation, content cards and shared inner-page styling. Existing CSS/fonts/icons stay in the repository and remain available.
+- `css/design.css`: responsive Blueprint Light palette (white and pale-blue surfaces, navy typography, engineering blue and the logo's original red), technical hero, navigation, content cards and shared inner-page styling. Existing CSS/fonts/icons stay in the repository and remain available.
 - `js/design.js`: dependency-free mobile navigation, clickable system-layer explainer, deterministic virtual HMI inputs/output and scroll reveals. It performs **no network requests**.
 - `en/index.html` and `de/index.html`: entirely rebuilt, localized homepages with an inline SVG signal schematic, dedicated service cards, technical stack, interactive demo, and direct contact call-to-action.
 - Core English/German content pages share the visual theme and use root-relative first-party asset/navigation URLs for portability.
@@ -35,3 +35,11 @@ The GitHub Pages production site remains unchanged until someone explicitly merg
 Run `node scripts/check-site.mjs` locally. Also check desktop and small-screen layout, keyboard navigation and Escape-to-close mobile menu, reduced-motion preferences, network requests in browser developer tools, and the EN/DE contact form consent display. Review copy and simulated behavior before merging to production.
 
 No GitHub Actions are added or executed as part of this design.
+
+## Visual palette and logo integration
+
+- Background: `#f4f8fc`; alternate surface: `#eaf2f9`; cards: `#ffffff`.
+- Engineering blue: `#245d93`; navy headings: `#19344f`; supporting text: `#4e657c`.
+- Logo red: `#d12f3e`, reserved for fine highlights, active schematic markers and focus accents. The original SVG logo is unchanged.
+- Logo plaques use navy backgrounds because the original mark includes light-grey elements. This preserves visibility without modifying or replacing the artwork.
+- The SVG diagram, interactive system stages, HMI visualization, website navigation, footer, forms and PWA manifest have all been adapted to the light design. Animations and functionality are retained.

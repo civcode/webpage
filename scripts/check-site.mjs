@@ -101,8 +101,8 @@ for (const lang of ['en', 'de']) {
     const equivalent = origin + '/' + other + '/' + (slug ? slug + '/' : '');
     if (!html.includes('href="' + equivalent + '" lang=' + other) && !html.includes('href="/' + other + '/' + (slug ? slug + '/' : '') + '" lang=' + other)) fail(page, 'Missing language-switch link to ' + equivalent);
     if (/\/de\/impressum\b/.test(html)) fail(page, 'Broken legacy Impressum link');
-    if (!html.includes('class="rse-theme"')) fail(page, 'Industrial Dark body class missing');
-    if (!html.includes('href="/css/design.css"')) fail(page, 'Local Industrial Dark stylesheet missing');
+    if (!html.includes('class="rse-theme"')) fail(page, 'Blueprint Light body class missing');
+    if (!html.includes('href="/css/design.css"')) fail(page, 'Local Blueprint Light stylesheet missing');
     if (!html.includes('src="/js/design.js"')) fail(page, 'Local interactive script missing');
     if (slug === '') {
       if (!html.includes('data-rse-hmi') || !html.includes('data-rse-stages')) fail(page, 'Homepage interactive demo missing');
@@ -121,6 +121,7 @@ if (/importScripts\s*\(\s*['"]https?:\/\//i.test(sw)) fail('service-worker.js', 
 for (const lang of ['en', 'de']) {
   const manifest = JSON.parse(readFileSync(join(root, lang, 'manifest.webmanifest'), 'utf8'));
   if (manifest.start_url !== '/' + lang + '/') fail(lang + '/manifest.webmanifest', 'Wrong language start_url');
+  if (manifest.theme_color !== '#ffffff' || manifest.background_color !== '#f4f8fc') fail(lang + '/manifest.webmanifest', 'Blueprint Light manifest theme is inconsistent');
   for (const icon of manifest.icons ?? []) resource(lang + '/manifest.webmanifest', icon.src);
 }
 if (failures.length) {

@@ -4,8 +4,8 @@
   "lang": "de-AT",
   "display": "standalone",
   "start_url": "/de/",
-  "background_color": "#fff",
-  "theme_color": "#0AA8A7",
+  "background_color": "#f4f8fc",
+  "theme_color": "#ffffff",
   "icons": [
     {
       "src": "/images/rse-favicon-01_hu_548c4ad2bd05695.png",
