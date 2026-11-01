@@ -116,6 +116,43 @@ for (const lang of ['en', 'de']) {
     }
   }
 }
+
+/* Validate the editable journal source, local artwork and generated bilingual pages. */
+const journal = JSON.parse(readFileSync(join(root, 'content/journal.json'), 'utf8'));
+if (!Array.isArray(journal.posts) || journal.posts.length === 0) fail('content/journal.json', 'No journal entries');
+const journalSlugs = new Set();
+for (const post of journal.posts ?? []) {
+  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(post.slug) || journalSlugs.has(post.slug)) fail('content/journal.json', 'Invalid or duplicate slug: ' + post.slug);
+  journalSlugs.add(post.slug);
+  if (!post.image?.startsWith('/images/journal/')) fail('content/journal.json', 'Images must be local to the journal: ' + post.slug);
+  else resource('content/journal.json', post.image);
+  for (const lang of ['en', 'de']) {
+    if (!post[lang]?.title || !post[lang]?.description || !post[lang]?.imageAlt || !post[lang]?.sections?.length) fail('content/journal.json', 'Missing language content for ' + lang + ': ' + post.slug);
+    const page = lang + '/blog/' + post.slug + '/index.html';
+    if (!existsSync(join(root, page))) { fail(page, 'Generated journal article is missing'); continue; }
+    const html = readFileSync(join(root, page), 'utf8');
+    if (!html.includes('src="' + post.image + '"')) fail(page, 'Post image does not match source data');
+    if (!html.includes('href="/' + lang + '/blog/"')) fail(page, 'Return to journal missing');
+    if (!html.includes('href="/' + (lang === 'en' ? 'de' : 'en') + '/blog/' + post.slug + '/"')) fail(page, 'Language switch missing');
+    if (!/<main\s+id="main"/.test(html) || !/<h1>/.test(html)) fail(page, 'Missing semantic main or heading');
+    if (journal.sampleMode && !html.includes('name="robots" content="noindex,follow"')) fail(page, 'Sample content must be noindexed');
+    if (!journal.sampleMode && !html.includes('name="robots" content="index,follow"')) fail(page, 'Published content should be indexed');
+  }
+}
+for (const lang of ['en', 'de']) {
+  const file = lang + '/blog/index.html';
+  const html = readFileSync(join(root, file), 'utf8');
+  if (!html.includes('href="/' + lang + '/manifest.webmanifest"')) fail(file, 'Local manifest missing');
+  if (!html.includes('href="/' + (lang === 'en' ? 'de' : 'en') + '/blog/"')) fail(file, 'Language switch missing');
+  if (journal.sampleMode && !html.includes('name="robots" content="noindex,follow"')) fail(file, 'Sample archive must be noindexed');
+  for (const slug of journalSlugs) if (!html.includes('href="/' + lang + '/blog/' + slug + '/"')) fail(file, 'Article link missing for ' + slug);
+  const homepage = readFileSync(join(root, lang, 'index.html'), 'utf8');
+  if (!homepage.includes('<!-- RSE JOURNAL START -->') || !homepage.includes('<!-- RSE JOURNAL END -->')) fail(lang + '/index.html', 'Regeneration markers missing');
+  if (!homepage.includes('href=/' + lang + '/blog/')) fail(lang + '/index.html', 'Journal navigation missing');
+  if (!existsSync(join(root, lang, 'blog/index.xml'))) fail(lang + '/blog/index.xml', 'Journal RSS feed missing');
+}
+if (!existsSync(join(root, 'scripts/build-journal.mjs'))) fail('scripts/build-journal.mjs', 'Manual authoring generator missing');
+
 const designCss = readFileSync(join(root, 'css/design.css'), 'utf8');
 if (!designCss.includes('--rse-bg:#f4f8fc') || !designCss.includes('--rse-red:#d12f3e') || !designCss.includes('--rse-blue:#245d93')) {
   fail('css/design.css', 'Blueprint Light palette variables changed unexpectedly');
