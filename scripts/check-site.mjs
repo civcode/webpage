@@ -104,6 +104,8 @@ for (const lang of ['en', 'de']) {
     if (!html.includes('class="rse-theme"')) fail(page, 'Blueprint Light body class missing');
     if (!html.includes('href="/css/design.css"')) fail(page, 'Local Blueprint Light stylesheet missing');
     if (!html.includes('src="/js/design.js"')) fail(page, 'Local interactive script missing');
+    if (!html.includes('<meta name="theme-color" content="#ffffff">')) fail(page, 'Blueprint Light browser theme missing');
+    if (!html.includes('href="/' + lang + '/manifest.webmanifest"')) fail(page, 'Local language manifest missing');
     if (slug === '') {
       if (!html.includes('data-rse-hmi') || !html.includes('data-rse-stages')) fail(page, 'Homepage interactive demo missing');
       if (!html.includes('class="rse-hero"')) fail(page, 'Homepage hero missing');
@@ -113,6 +115,10 @@ for (const lang of ['en', 'de']) {
       if (!/<input\b[^>]*name=recaptcha_consent[^>]*required/i.test(html)) fail(page, 'Airform informed-consent checkbox missing');
     }
   }
+}
+const designCss = readFileSync(join(root, 'css/design.css'), 'utf8');
+if (!designCss.includes('--rse-bg:#f4f8fc') || !designCss.includes('--rse-red:#d12f3e') || !designCss.includes('--rse-blue:#245d93')) {
+  fail('css/design.css', 'Blueprint Light palette variables changed unexpectedly');
 }
 const script = readFileSync(join(root, 'js/design.js'), 'utf8');
 if (/\b(?:fetch|XMLHttpRequest|sendBeacon|importScripts)\s*\(/.test(script)) fail('js/design.js', 'Unexpected network API in client-side demo');
