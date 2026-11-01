@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-labelledby="workstation-title"><title id="workstation-title">Illustration of a dual GPU AI workstation with 64 GB of total VRAM</title><defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f6fafe"/><stop offset="1" stop-color="#dcebf6"/></linearGradient><pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#92b7d1" stroke-opacity=".32" stroke-width="1"/></pattern><filter id="shadow"><feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#254967" flood-opacity=".13"/></filter></defs><rect width="960" height="600" fill="url(#bg)"/><rect width="960" height="600" fill="url(#grid)"/><path d="M0 70h960" stroke="#9bbbd1"/><path d="M0 530h960" stroke="#9bbbd1"/><text x="50" y="43" font-family="monospace" font-size="17" fill="#315a7e" letter-spacing="3">ROTH / ENGINEERING NOTES</text><circle cx="893" cy="36" r="6" fill="#d12f3e"/><text x="49" y="565" font-family="monospace" font-size="17" fill="#526e86" letter-spacing="2">ILLUSTRATIVE SAMPLE / 01</text>
+<g filter="url(#shadow)" transform="translate(85 104)">
+<path d="M105 45L375 20l100 65-272 31Z" fill="#6c96b6" stroke="#284d70" stroke-width="4"/>
+<path d="M105 45l98 71v344l-98-69Z" fill="#244666" stroke="#183b5b" stroke-width="4"/>
+<path d="M203 116l272-31v342l-272 33Z" fill="#153752" stroke="#274f70" stroke-width="4"/>
+<path d="M228 146l222-25v277l-222 25Z" fill="#2f5878" stroke="#7aa5c5" stroke-width="3"/>
+<path d="M240 163l196-22v257l-196 23Z" fill="#0d2942"/>
+<g stroke="#3a87b8" stroke-width="4" fill="none">
+<circle cx="300" cy="223" r="36"/><circle cx="383" cy="213" r="36"/><circle cx="302" cy="333" r="36"/><circle cx="384" cy="325" r="36"/>
+</g><g stroke="#7dc0e6" stroke-width="2"><path d="M270 193l60 60m0-60-60 60m82-67 60 55m0-55-60 55m-78 61 56 63m0-63-56 63m84-62 52 55m0-55-52 55"/></g>
+<path d="M119 80l66 46v235l-66-46Z" fill="#193753" stroke="#517898" stroke-width="2"/>
+<circle cx="145" cy="155" r="5" fill="#d12f3e"/><path d="M129 201l48 33m-48 1 48 34m-48 1 48 33" stroke="#729bb8" stroke-width="6"/>
+<rect x="273" y="423" width="130" height="13" rx="6" fill="#d12f3e"/></g>
+<g transform="translate(620 175)">
+<rect width="292" height="255" rx="14" fill="#fff" stroke="#a7c6dc" stroke-width="3"/>
+<rect x="21" y="24" width="246" height="48" rx="7" fill="#e7f1f8"/>
+<text x="38" y="54" font-family="monospace" font-size="19" fill="#234b70">AI WORKSTATION</text>
+<text x="32" y="125" font-family="Arial,sans-serif" font-size="18" fill="#516e84">TOTAL GPU MEMORY</text>
+<text x="31" y="202" font-family="Arial,sans-serif" font-weight="bold" font-size="73" fill="#214b73">64</text><text x="141" y="202" font-family="Arial,sans-serif" font-size="30" fill="#315f87">GB</text>
+<rect x="29" y="216" width="229" height="7" rx="4" fill="#d6e5ef"/><rect x="29" y="216" width="190" height="7" rx="4" fill="#d12f3e"/>
+</g>
+</svg>
