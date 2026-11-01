@@ -60,3 +60,12 @@ No GitHub Actions are added or executed as part of this design.
 - The top panel illustrates the flow from network signals through diagnostics and application logic to user interfaces. The page concludes with a four-step engineering process and a project contact CTA.
 - The design uses the same original white-backed logo and does not add third-party images, fonts, JavaScript, analytics or external services. The existing Airform contact form and consent remain unchanged.
 - `scripts/check-site.mjs` includes regression checks for both language versions. Run it manually before deployment.
+
+## Technology toolchain grid
+
+- `/en/technology/` and `/de/technology/` now match the Blueprint Light Services design instead of using long alternating icon/text rows.
+- There are **16 technology tiles** with icon or logo, purpose, and description in both languages. Categories: languages (C, C++, Python), development tools (Linux, Docker, VS Code, Jupyter), frameworks/AI (Qt/QML, OpenCV, PyTorch), robotics/simulation (ROS, Gazebo), and delivery/collaboration (Git, GitHub, Bitbucket, Jira).
+- Visitors can filter the grid by category using the existing self-hosted `js/services.js`. All tiles are visible without JavaScript. The filter also updates the accessible result count.
+- `css/services.css` provides the common grid and hero, while `css/technology.css` styles the technology-logo tiles and system workflow. All icon assets and icon fonts are served from this repository; the existing SVG logo retains a **white background**.
+- A toolchain overview, example signal-to-HMI schematic, four-phase development workflow and local links to Services, Journal and Contact connect the technology stack to practical outcomes.
+- `scripts/check-site.mjs` includes bilingual Technology page regression checks. No additional GitHub Actions or remote dependencies were introduced.
