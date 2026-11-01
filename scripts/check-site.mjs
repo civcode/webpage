@@ -77,6 +77,10 @@ for (const absolute of files) {
   }
   checked++;
 }
+const rootHtml = readFileSync(join(root, 'index.html'), 'utf8');
+if (!/<meta\s+http-equiv=["']?refresh["']?\s+content=["']0;\s*url=\/en\/["']/i.test(rootHtml)) {
+  fail('index.html', 'Root must redirect to /en/ on the current host, not the live domain');
+}
 for (const lang of ['en', 'de']) {
   for (const slug of slugs) {
     const page = lang + '/' + (slug ? slug + '/' : '') + 'index.html';
@@ -88,6 +92,8 @@ for (const lang of ['en', 'de']) {
     if (!/<main\s+id=(?:"main"|'main'|main)(?:\s|>)/i.test(html)) fail(page, 'Missing main landmark for skip link');
     if (!html.includes('class=skip-link')) fail(page, 'Missing keyboard skip link');
     if (!html.includes('rel=canonical')) fail(page, 'Missing canonical URL');
+    if (/<base\\s+href=/i.test(html)) fail(page, 'Absolute base URL prevents a portable local preview');
+    if (/<link\\s+rel="shortcut icon"\\s+href=https?:\\/\\//i.test(html)) fail(page, 'Favicon should load from the current host');
     for (const other of ['en', 'de']) {
       if (!html.includes('hreflang=' + other)) fail(page, 'Missing hreflang ' + other);
     }
