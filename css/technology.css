@@ -1,0 +1,42 @@
+/*
+ * Technology & Tools — Blueprint Light extension of Services visual system.
+ * services.css supplies responsive grids/filters; this file adds logo-led tool cards.
+ * Assets are self-hosted, no external fonts, image requests or scripts.
+ */
+.rse-technology .rse-svc-hero{background:linear-gradient(115deg,#fff 5%,#edf5fb 57%,#e4f0f8)}
+.rse-technology .rse-svc-hero h1{max-width:790px}
+.rse-tech-stack{margin:0;padding:0;list-style:none}
+.rse-tech-stack li{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:14px 17px;border:1px solid #cbddea;background:#f7fbfe;border-radius:8px;margin:0 0 10px}
+.rse-tech-stack li:last-child{margin:0}
+.rse-tech-stack-key{display:inline-flex;align-items:center;gap:12px;color:#1e4e75;font-weight:800;font-size:.88rem}
+.rse-tech-stack-index{font:.7rem ui-monospace,Consolas,monospace;letter-spacing:.06em;color:#d12f3e}
+.rse-tech-stack-value{font:.77rem ui-monospace,Consolas,monospace;color:#54738e;text-align:right}
+.rse-technology .rse-svc-map-body{padding:21px}
+.rse-technology .rse-svc-cell{min-height:257px}
+.rse-technology .rse-svc-cell-top{padding-right:0;margin-bottom:18px}
+.rse-tech-mark{display:flex;align-items:center;justify-content:center;flex:none;width:55px;height:55px;border:1px solid #c8dce9;background:#edf5fb;border-radius:10px;overflow:hidden;color:#245d93}
+.rse-tech-mark i{font-size:33px;line-height:1;color:#245d93!important}
+.rse-tech-mark img{display:block;width:36px;height:36px;object-fit:contain}
+.rse-tech-mark span{font:800 1.04rem/1 ui-monospace,Consolas,monospace;color:#285d87;letter-spacing:-.04em}
+.rse-tech-mark svg{width:36px;height:36px;fill:none;stroke:#245d93;stroke-width:1.65;stroke-linejoin:round;stroke-linecap:round}
+.rse-tech-mark[data-mark=red]{background:#fff1f2;border-color:#efcdd2}
+.rse-tech-mark[data-mark=red] span{color:#b72937}
+.rse-technology .rse-svc-cell[data-rse-category=languages]:before{background:#245d93}
+.rse-technology .rse-svc-cell[data-rse-category=tooling]:before{background:#547da7}
+.rse-technology .rse-svc-cell[data-rse-category=frameworks]:before{background:#d12f3e}
+.rse-technology .rse-svc-cell[data-rse-category=robotics]:before{background:#487f94}
+.rse-technology .rse-svc-cell[data-rse-category=collaboration]:before{background:#728aa4}
+.rse-tech-label{color:#5b7d94;font:.73rem ui-monospace,Consolas,monospace;text-transform:uppercase;letter-spacing:.07em;margin:0 0 9px}
+.rse-tech-connection{background:#fff;border-top:1px solid #d4e4ef;padding:86px 0}
+.rse-tech-connection-inner{display:grid;grid-template-columns:1.2fr .8fr;gap:55px;align-items:center}
+.rse-tech-connection .rse-lede{margin-bottom:23px}
+.rse-tech-connection-links{display:flex;flex-wrap:wrap;gap:11px}
+.rse-tech-schematic{border:1px solid #cbdfea;border-radius:13px;background:#f5f9fc;padding:25px}
+.rse-tech-schematic-head{display:flex;justify-content:space-between;gap:15px;font:.68rem ui-monospace,Consolas,monospace;color:#57758c;letter-spacing:.07em;margin-bottom:21px}
+.rse-tech-schematic-flow{display:grid;grid-template-columns:1fr 35px 1fr;gap:7px;align-items:center;margin:0 0 11px}
+.rse-tech-schematic-node{background:#fff;border:1px solid #bdd5e5;border-radius:8px;padding:15px 9px;text-align:center;font-weight:800;font-size:.81rem;color:#214e75}
+.rse-tech-schematic-arrow{text-align:center;color:#d12f3e;font-size:1.25rem}
+.rse-tech-schematic-footer{border-top:1px dashed #c5d8e6;padding-top:14px;margin-top:21px;font:.71rem ui-monospace,Consolas,monospace;color:#5a788f}
+@media(max-width:860px){.rse-tech-connection-inner{grid-template-columns:1fr;gap:28px}.rse-tech-schematic{max-width:560px}}
+@media(max-width:640px){.rse-technology .rse-svc-cell{min-height:0}.rse-tech-connection{padding:62px 0}.rse-tech-stack li{padding:12px 13px}.rse-tech-stack-value{font-size:.7rem}}
+@media(prefers-reduced-motion:reduce){.rse-technology .rse-svc-cell{transition:none}}
