@@ -51,3 +51,12 @@ No GitHub Actions are added or executed as part of this design.
 - The three example topics are a 64 GB VRAM AI workstation, mobile robot path planning, and J1939 HMI visualization. These are **sample concepts**, not claims that the projects have been completed. The journal and generated articles are noindexed while `content/journal.json` has `sampleMode: true`.
 - `content/journal.json` is the editable source, and `node scripts/build-journal.mjs` rebuilds the bilingual HTML, local RSS and homepage cards. See [BLOG.md](BLOG.md) for the complete photo/post workflow.
 - Obsolete template posts and pagination pages redirect to the journal **on the current host**, including when previewed at localhost.
+
+## Services capability grid
+
+- `/en/services/` and `/de/services/` now use a technical Blueprint Light grid instead of the original generic service text-and-slider sections.
+- 15 bilingual cards in five groups: **vehicle networks** (CAN/CAN FD, J1939, Ethernet/TCP-IP), **diagnostics** (UDS, DoIP, diagnostic trace analysis), **HMI** (Qt/QML, industrial HMI, signal visualization), **embedded** (C++/Python, embedded Linux, system integration), and **robotics** (ROS/Gazebo, path planning, computer vision).
+- A local `css/services.css` stylesheet renders the responsive three/two/one-column cards. Local `js/services.js` provides category filtering with pressed-state accessibility and a live results count; every card remains visible if JavaScript is disabled.
+- The top panel illustrates the flow from network signals through diagnostics and application logic to user interfaces. The page concludes with a four-step engineering process and a project contact CTA.
+- The design uses the same original white-backed logo and does not add third-party images, fonts, JavaScript, analytics or external services. The existing Airform contact form and consent remain unchanged.
+- `scripts/check-site.mjs` includes regression checks for both language versions. Run it manually before deployment.
