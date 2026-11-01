@@ -1,0 +1,155 @@
+[
+  {
+    "slug": "ai-workstation-64gb-vram",
+    "image": "/images/journal/ai-workstation.svg",
+    "tags": [
+      "AI",
+      "GPU",
+      "LINUX"
+    ],
+    "en": {
+      "category": "AI / HARDWARE",
+      "title": "A 64 GB VRAM AI workstation",
+      "description": "An illustrative look at designing a local AI workstation: GPU memory planning, cooling, Linux tooling, and repeatable model experiments.",
+      "imageAlt": "Blueprint-style illustration of a multi-GPU AI workstation and a 64 GB total VRAM indicator",
+      "imageCaption": "Sample artwork of an AI workstation; not a photograph of an actual build.",
+      "sections": [
+        {
+          "heading": "The idea",
+          "text": "A local workstation can be useful when models, training data, or experiments should stay on hardware under your control. In this example project, the design target is 64 GB of total GPU VRAM, with an emphasis on predictable thermals and maintainable software."
+        },
+        {
+          "heading": "Engineering decisions",
+          "text": "A sensible plan starts with model sizes, memory bandwidth, PCIe lane allocation, power delivery, cooling, and storage throughput. A machine with several GPUs can have 64 GB of aggregate VRAM, but their memory is not automatically one shared 64 GB pool; splitting a workload requires compatible software and an appropriate parallelization strategy."
+        },
+        {
+          "heading": "Possible next steps",
+          "text": "The project note could document the actual hardware list, internal photographs, measured power draw, inference throughput, temperature readings, and lessons learned after the workstation is built."
+        }
+      ]
+    },
+    "de": {
+      "category": "KI / HARDWARE",
+      "title": "Eine KI-Workstation mit 64 GB VRAM",
+      "description": "Ein Beispiel für die Planung einer lokalen KI-Workstation: GPU-Speicher, Kühlung, Linux-Tooling und reproduzierbare Modellexperimente.",
+      "imageAlt": "Technische Illustration einer KI-Workstation mit mehreren GPUs und 64 GB gesamtem Videospeicher",
+      "imageCaption": "Beispielillustration einer KI-Workstation, kein Foto eines tatsächlichen Aufbaus.",
+      "sections": [
+        {
+          "heading": "Die Idee",
+          "text": "Eine lokale Workstation bietet sich an, wenn Modelle, Trainingsdaten oder Experimente auf eigener Hardware bleiben sollen. In diesem Beispiel liegt das Planungsziel bei insgesamt 64 GB GPU-VRAM – mit Fokus auf zuverlässige Kühlung und eine wartbare Softwareumgebung."
+        },
+        {
+          "heading": "Technische Überlegungen",
+          "text": "Ausgangspunkt sind Modellgröße, Speicherbandbreite, PCIe-Lanes, Stromversorgung, Kühlung und Speicherdurchsatz. Mehrere GPUs können zusammen 64 GB VRAM besitzen, der Speicher ist aber nicht automatisch als gemeinsamer 64-GB-Bereich nutzbar. Dafür braucht es passende Software und eine geeignete Parallelisierungsstrategie."
+        },
+        {
+          "heading": "Mögliche nächste Schritte",
+          "text": "Aus dem Beispiel könnte später ein echter Projektbericht mit Komponentenliste, eigenen Fotos, Messwerten zu Stromverbrauch, Inferenzgeschwindigkeit und Temperaturen sowie praktischen Erkenntnissen entstehen."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "mobile-robot-path-planning",
+    "image": "/images/journal/mobile-robot-path-planning.svg",
+    "tags": [
+      "ROBOTICS",
+      "ROS",
+      "ALGORITHMS"
+    ],
+    "en": {
+      "category": "ROBOTICS / SOFTWARE",
+      "title": "Path planning for mobile robots",
+      "description": "A sample engineering note about occupancy grids, A* search, path smoothing, and navigation around obstacles.",
+      "imageAlt": "Illustrated occupancy grid showing robot start, obstacles, and a blue navigation path toward a goal",
+      "imageCaption": "Illustrative planning map with a synthetic route and obstacles.",
+      "sections": [
+        {
+          "heading": "The challenge",
+          "text": "A mobile robot needs more than a line between two points. It needs a route that avoids known obstacles, respects its dimensions and movement constraints, and can be updated when the environment changes."
+        },
+        {
+          "heading": "A possible library design",
+          "text": "A useful prototype might accept an occupancy grid, inflate obstacles by the robot footprint, generate a collision-free path with A*, and then apply conservative smoothing. Search cost, turn penalties, and unknown cells can be configurable so different robots and environments can share the same core algorithm."
+        },
+        {
+          "heading": "How to evaluate it",
+          "text": "A real project post could include before-and-after path plots, reproducible test maps, timing measurements, ROS integration details, and a short video from a simulator or physical robot."
+        }
+      ]
+    },
+    "de": {
+      "category": "ROBOTIK / SOFTWARE",
+      "title": "Pfadplanung für mobile Roboter",
+      "description": "Ein beispielhafter Engineering-Beitrag über Belegungsgitter, A*-Suche, geglättete Pfade und die Navigation um Hindernisse.",
+      "imageAlt": "Illustriertes Belegungsgitter mit Roboterstart, Hindernissen und blauem Pfad zum Ziel",
+      "imageCaption": "Beispielkarte mit synthetisch erzeugter Route und Hindernissen.",
+      "sections": [
+        {
+          "heading": "Die Herausforderung",
+          "text": "Ein mobiler Roboter braucht mehr als eine direkte Verbindung zwischen zwei Punkten. Die Route muss Hindernisse berücksichtigen, zu den Abmessungen und Bewegungsmöglichkeiten passen und bei Änderungen in der Umgebung neu berechnet werden können."
+        },
+        {
+          "heading": "Möglicher Aufbau einer Bibliothek",
+          "text": "Ein Prototyp könnte Belegungsgitter einlesen, Hindernisse anhand des Roboterumrisses vergrößern, mit A* einen kollisionsfreien Pfad suchen und diesen anschließend vorsichtig glätten. Suchkosten, Lenkaufwand und unbekannte Bereiche lassen sich konfigurierbar gestalten."
+        },
+        {
+          "heading": "So ließe sich die Lösung testen",
+          "text": "Ein späterer Praxisbeitrag könnte Karten vor und nach der Pfadglättung, reproduzierbare Tests, Laufzeitmessungen, die ROS-Anbindung und ein kurzes Video aus der Simulation oder vom realen Roboter zeigen."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "j1939-hmi-visualization",
+    "image": "/images/journal/j1939-hmi.svg",
+    "tags": [
+      "HMI",
+      "CAN BUS",
+      "J1939"
+    ],
+    "en": {
+      "category": "HMI / VEHICLE SYSTEMS",
+      "title": "J1939 data visualization in an HMI",
+      "description": "A sample interface concept for turning CAN/J1939 messages into clear engine, temperature, and diagnostic displays.",
+      "imageAlt": "Illustration of a vehicle HMI displaying simulated engine speed, coolant temperature and CAN bus connectivity",
+      "imageCaption": "Illustrative interface with synthetic readings; no live vehicle data.",
+      "sections": [
+        {
+          "heading": "Making vehicle data useful",
+          "text": "Heavy-duty vehicle systems often expose information through SAE J1939 over CAN. Raw frames are useful to engineers, but operators need meaningful values, clear units, current status, and an immediate indication when data is no longer valid."
+        },
+        {
+          "heading": "A practical visualization concept",
+          "text": "A prototype HMI could decode selected parameter group numbers (PGNs) and suspect parameter numbers (SPNs), map valid values to gauges, and show explicit disconnected, stale, or not-available states. Each signal should have defined scaling, units, and a documented update rate."
+        },
+        {
+          "heading": "What to share in a real post",
+          "text": "A production-focused article could include a Qt screen recording, sample trace files with sensitive identifiers removed, a signal mapping table, and notes on testing against both recorded traffic and simulated bus errors."
+        }
+      ]
+    },
+    "de": {
+      "category": "HMI / FAHRZEUGSYSTEME",
+      "title": "J1939-Daten in einer HMI visualisieren",
+      "description": "Ein Beispielkonzept, um CAN-/J1939-Nachrichten in übersichtliche Anzeigen für Motorwerte, Temperaturen und Diagnose zu übertragen.",
+      "imageAlt": "Illustration einer Fahrzeug-HMI mit simulierten Motordrehzahlen, Kühlmitteltemperatur und CAN-Bus-Status",
+      "imageCaption": "Beispieloberfläche mit synthetischen Messwerten, keine Live-Fahrzeugdaten.",
+      "sections": [
+        {
+          "heading": "Fahrzeugdaten sinnvoll darstellen",
+          "text": "In Nutzfahrzeugen und mobilen Maschinen werden Informationen häufig über SAE J1939 auf CAN bereitgestellt. Rohe Frames helfen bei der Entwicklung; für die Bedienung sind verständliche Größen, Einheiten, aktuelle Zustände und eine deutliche Kennzeichnung ungültiger Daten entscheidend."
+        },
+        {
+          "heading": "Ein praxisnahes Visualisierungskonzept",
+          "text": "Eine beispielhafte HMI könnte ausgewählte Parameter Group Numbers (PGNs) und Suspect Parameter Numbers (SPNs) dekodieren und gültige Werte auf Anzeigen abbilden. Getrennte Zustände für Verbindungsabbruch, veraltete Daten oder nicht verfügbare Werte verbessern die Verständlichkeit."
+        },
+        {
+          "heading": "Inhalte für einen echten Projektbeitrag",
+          "text": "Denkbar wären ein Qt-Screencast, anonymisierte CAN-Traces, eine Tabelle mit Signalzuordnungen und Erfahrungen beim Testen mit aufgezeichnetem Verkehr sowie simulierten Busfehlern."
+        }
+      ]
+    }
+  }
+]
