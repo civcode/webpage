@@ -126,6 +126,24 @@ for (const lang of ['en', 'de']) {
         if (!html.includes(expected)) fail(page, 'Missing named technical capability: ' + expected);
       }
     }
+    if (slug === 'technology') {
+      const cards = [...html.matchAll(/class="rse-svc-cell"\s+data-rse-category="(languages|tooling|frameworks|robotics|collaboration)"/g)];
+      if (cards.length !== 16) fail(page, 'Expected 16 development technology cards');
+      const counts = {languages:3,tooling:4,frameworks:3,robotics:2,collaboration:4};
+      for (const [category, total] of Object.entries(counts)) {
+        if (cards.filter(item => item[1] === category).length !== total) fail(page, 'Wrong technology count in ' + category);
+        if (!html.includes('data-rse-filter="' + category + '"')) fail(page, 'Missing technology filter: ' + category);
+      }
+      if (!html.includes('data-rse-filter="all"') || !html.includes('data-rse-services')) fail(page, 'Missing technology filter controls');
+      for (const dependency of ['href="/css/services.css"', 'href="/css/technology.css"', 'src="/js/services.js"']) {
+        if (!html.includes(dependency)) fail(page, 'Missing local technology asset: ' + dependency);
+      }
+      if (!/<main id=main class="rse-services rse-technology">/.test(html)) fail(page, 'Redesigned Technology main is missing');
+      for (const tool of ['C++', 'Python', 'Linux', 'Docker', 'Qt / QML', 'OpenCV', 'PyTorch', 'ROS', 'Gazebo']) {
+        if (!html.includes(tool)) fail(page, 'Missing technology: ' + tool);
+      }
+      if (html.includes('class="tech-icon text-center"') || html.includes('<h3 class="section-title h4"></h3>')) fail(page, 'Old Technology placeholder layout remains');
+    }
     if (slug === 'contact') {
       if (!html.includes('action=https://airform.io/contact@rothsoftware.com')) fail(page, 'Airform action changed');
       if (!/<input\b[^>]*name=recaptcha_consent[^>]*required/i.test(html)) fail(page, 'Airform informed-consent checkbox missing');
@@ -178,6 +196,9 @@ if (/@import\s|url\(\s*["']?https?:\/\//i.test(serviceCss)) fail('css/services.c
 const serviceJs = readFileSync(join(root, 'js/services.js'), 'utf8');
 if (/\b(?:fetch|XMLHttpRequest|sendBeacon|importScripts)\s*\(/.test(serviceJs)) fail('js/services.js', 'Unexpected network API in service filters');
 if (!serviceJs.includes("cell.hidden =")) fail('js/services.js', 'Filter script no longer changes card visibility');
+const technologyCss = readFileSync(join(root, 'css/technology.css'), 'utf8');
+if (/@import\s|url\(\s*["']?https?:\/\//i.test(technologyCss)) fail('css/technology.css', 'Remote CSS not allowed');
+if (!technologyCss.includes('.rse-tech-mark') || !technologyCss.includes('prefers-reduced-motion:reduce')) fail('css/technology.css', 'Technology grid styling/reduced-motion missing');
 const script = readFileSync(join(root, 'js/design.js'), 'utf8');
 if (/\b(?:fetch|XMLHttpRequest|sendBeacon|importScripts)\s*\(/.test(script)) fail('js/design.js', 'Unexpected network API in client-side demo');
 const sw = readFileSync(join(root, 'service-worker.js'), 'utf8');
