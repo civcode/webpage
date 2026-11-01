@@ -9373,3 +9373,7 @@ a.btn, .btn, .btn-primary {
 
 .dark .preloader {
   background-color: #181818; }
+
+/* Keyboard-accessible skip navigation */
+.skip-link{position:absolute;top:-100px;left:1rem;z-index:10000;background:#fff;color:#111;padding:.7rem 1rem;box-shadow:0 2px 8px #0002}
+.skip-link:focus{top:1rem}

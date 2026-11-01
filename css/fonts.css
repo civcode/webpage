@@ -74,8 +74,7 @@
 /* Devicon */
 @font-face {
   font-family: "devicon";
-  src: url("/fonts/devicon/devicon.woff2") format("woff2"),
-       url("/fonts/devicon/devicon.woff") format("woff"),
+  src: url("/fonts/devicon/devicon.woff") format("woff"),
        url("/fonts/devicon/devicon.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
