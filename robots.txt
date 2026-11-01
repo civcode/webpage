@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rothsoftware.com/sitemap.xml
