@@ -85,7 +85,7 @@ for (const lang of ['en', 'de']) {
     if ((html.match(/<title>/g) || []).length !== 1) fail(page, 'Expected exactly one title');
     if (!new RegExp('<html\\s+lang=' + lang).test(html)) fail(page, 'Incorrect document language');
     if (/Lorem ipsum|This is meta description|<todo>/i.test(html)) fail(page, 'Unfinished placeholder');
-    if (!html.includes('<main id=main>')) fail(page, 'Missing main landmark for skip link');
+    if (!/<main\s+id=(?:"main"|'main'|main)(?:\s|>)/i.test(html)) fail(page, 'Missing main landmark for skip link');
     if (!html.includes('class=skip-link')) fail(page, 'Missing keyboard skip link');
     if (!html.includes('rel=canonical')) fail(page, 'Missing canonical URL');
     for (const other of ['en', 'de']) {
@@ -93,14 +93,23 @@ for (const lang of ['en', 'de']) {
     }
     const other = lang === 'de' ? 'en' : 'de';
     const equivalent = origin + '/' + other + '/' + (slug ? slug + '/' : '');
-    if (!html.includes('href="' + equivalent + '" lang=' + other)) fail(page, 'Missing language-switch link to ' + equivalent);
+    if (!html.includes('href="' + equivalent + '" lang=' + other) && !html.includes('href="/' + other + '/' + (slug ? slug + '/' : '') + '" lang=' + other)) fail(page, 'Missing language-switch link to ' + equivalent);
     if (/\/de\/impressum\b/.test(html)) fail(page, 'Broken legacy Impressum link');
+    if (!html.includes('class="rse-theme"')) fail(page, 'Industrial Dark body class missing');
+    if (!html.includes('href="/css/design.css"')) fail(page, 'Local Industrial Dark stylesheet missing');
+    if (!html.includes('src="/js/design.js"')) fail(page, 'Local interactive script missing');
+    if (slug === '') {
+      if (!html.includes('data-rse-hmi') || !html.includes('data-rse-stages')) fail(page, 'Homepage interactive demo missing');
+      if (!html.includes('class="rse-hero"')) fail(page, 'Homepage hero missing');
+    }
     if (slug === 'contact') {
       if (!html.includes('action=https://airform.io/contact@rothsoftware.com')) fail(page, 'Airform action changed');
       if (!/<input\b[^>]*name=recaptcha_consent[^>]*required/i.test(html)) fail(page, 'Airform informed-consent checkbox missing');
     }
   }
 }
+const script = readFileSync(join(root, 'js/design.js'), 'utf8');
+if (/\b(?:fetch|XMLHttpRequest|sendBeacon|importScripts)\s*\(/.test(script)) fail('js/design.js', 'Unexpected network API in client-side demo');
 const sw = readFileSync(join(root, 'service-worker.js'), 'utf8');
 if (/importScripts\s*\(\s*['"]https?:\/\//i.test(sw)) fail('service-worker.js', 'Remote dependency');
 for (const lang of ['en', 'de']) {
