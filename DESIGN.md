@@ -5,8 +5,8 @@ This is the static GitHub Pages design prototype on branch `design`, based on th
 ## Preview locally
 
 1. Check out this branch: `git switch design` (or `git clone -b design https://github.com/civcode/webpage.git`).
-2. At the repository root run: `python3 -m http.server 8000`.
-3. Open `http://localhost:8000/en/` and `http://localhost:8000/de/`.
+2. At the repository root run: `python3 -m http.server 8000`. If you previously cloned this branch, first run `git pull origin design` so the local redirect fix is present.
+3. Open `http://localhost:8000/` (which now redirects **locally** to `/en/`), or go directly to `http://localhost:8000/en/` and `http://localhost:8000/de/`. Do not use `0.0.0.0` as the browser address; use `localhost` or `127.0.0.1`.
 4. Review the services, technology, about, contact and legal pages from the site navigation. Switch EN/DE to test matching routes.
 
 **Do not test-submit the contact form unless you intend to transmit the data to Airform.** The form continues to POST to `airform.io` only after the visitor explicitly submits the required consent form. Local preview does not disable that action.
