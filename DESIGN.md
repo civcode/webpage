@@ -41,5 +41,13 @@ No GitHub Actions are added or executed as part of this design.
 - Background: `#f4f8fc`; alternate surface: `#eaf2f9`; cards: `#ffffff`.
 - Engineering blue: `#245d93`; navy headings: `#19344f`; supporting text: `#4e657c`.
 - Logo red: `#d12f3e`, reserved for fine highlights, active schematic markers and focus accents. The original SVG logo is unchanged.
-- Logo plaques use navy backgrounds because the original mark includes light-grey elements. This preserves visibility without modifying or replacing the artwork.
-- The SVG diagram, interactive system stages, HMI visualization, website navigation, footer, forms and PWA manifest have all been adapted to the light design. Animations and functionality are retained.
+- The header and footer logo plaques are always **white**, as requested; the original red/grey SVG mark is unchanged.
+- The SVG diagram, interactive system stages, HMI visualization, navigation, footer, forms and PWA manifest use Blueprint Light. Animations and functionality are retained.
+
+## Bilingual project journal
+
+- Journal landing pages: `/en/blog/` and `/de/blog/`, with three illustrative posts, three local SVG covers and language-matched article detail pages.
+- All maintained site pages include a Journal navigation and footer link. The two homepages show three latest-post cards before the contact CTA.
+- The three example topics are a 64 GB VRAM AI workstation, mobile robot path planning, and J1939 HMI visualization. These are **sample concepts**, not claims that the projects have been completed. The journal and generated articles are noindexed while `content/journal.json` has `sampleMode: true`.
+- `content/journal.json` is the editable source, and `node scripts/build-journal.mjs` rebuilds the bilingual HTML, local RSS and homepage cards. See [BLOG.md](BLOG.md) for the complete photo/post workflow.
+- Obsolete template posts and pagination pages redirect to the journal **on the current host**, including when previewed at localhost.
