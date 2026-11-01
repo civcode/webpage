@@ -110,6 +110,22 @@ for (const lang of ['en', 'de']) {
       if (!html.includes('data-rse-hmi') || !html.includes('data-rse-stages')) fail(page, 'Homepage interactive demo missing');
       if (!html.includes('class="rse-hero"')) fail(page, 'Homepage hero missing');
     }
+    if (slug === 'services') {
+      const cards = [...html.matchAll(/class="rse-svc-cell"\s+data-rse-category="(networks|diagnostics|hmi|embedded|robotics)"/g)];
+      if (cards.length !== 15) fail(page, 'Expected 15 engineering capability cards');
+      const categories = ['networks', 'diagnostics', 'hmi', 'embedded', 'robotics'];
+      for (const category of categories) {
+        if (cards.filter(item => item[1] === category).length !== 3) fail(page, 'Expected three cards in ' + category);
+        if (!html.includes('data-rse-filter="' + category + '"')) fail(page, 'Missing filter button: ' + category);
+      }
+      if (!html.includes('data-rse-filter="all"')) fail(page, 'Missing all-capabilities filter');
+      if (!html.includes('href="/css/services.css"') || !html.includes('src="/js/services.js"')) fail(page, 'Missing local service grid assets');
+      if (!/<main id=main class="rse-services">/.test(html)) fail(page, 'Missing redesigned services main');
+      if (/Robust Engineering|Reliable Quality|Solides Engineering|Zuverlässige Qualität/.test(html)) fail(page, 'Old generic service blocks remain');
+      for (const expected of ['CAN / CAN FD', 'SAE J1939', 'UDS', 'DoIP', 'Qt / QML']) {
+        if (!html.includes(expected)) fail(page, 'Missing named technical capability: ' + expected);
+      }
+    }
     if (slug === 'contact') {
       if (!html.includes('action=https://airform.io/contact@rothsoftware.com')) fail(page, 'Airform action changed');
       if (!/<input\b[^>]*name=recaptcha_consent[^>]*required/i.test(html)) fail(page, 'Airform informed-consent checkbox missing');
@@ -157,6 +173,11 @@ const designCss = readFileSync(join(root, 'css/design.css'), 'utf8');
 if (!designCss.includes('--rse-bg:#f4f8fc') || !designCss.includes('--rse-red:#d12f3e') || !designCss.includes('--rse-blue:#245d93')) {
   fail('css/design.css', 'Blueprint Light palette variables changed unexpectedly');
 }
+const serviceCss = readFileSync(join(root, 'css/services.css'), 'utf8');
+if (/@import\s|url\(\s*["']?https?:\/\//i.test(serviceCss)) fail('css/services.css', 'Remote CSS import not allowed');
+const serviceJs = readFileSync(join(root, 'js/services.js'), 'utf8');
+if (/\b(?:fetch|XMLHttpRequest|sendBeacon|importScripts)\s*\(/.test(serviceJs)) fail('js/services.js', 'Unexpected network API in service filters');
+if (!serviceJs.includes("cell.hidden =")) fail('js/services.js', 'Filter script no longer changes card visibility');
 const script = readFileSync(join(root, 'js/design.js'), 'utf8');
 if (/\b(?:fetch|XMLHttpRequest|sendBeacon|importScripts)\s*\(/.test(script)) fail('js/design.js', 'Unexpected network API in client-side demo');
 const sw = readFileSync(join(root, 'service-worker.js'), 'utf8');
